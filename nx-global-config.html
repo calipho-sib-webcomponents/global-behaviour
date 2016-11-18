@@ -1,0 +1,26 @@
+<link rel="import" href="../polymer/polymer.html">
+<dom-module name="nx-global-config">
+    <script>
+        (function () {
+
+            Polymer({
+                is: 'nx-global-config',
+
+                properties: {
+                    config: {
+                        type: Object,
+                        notify: true
+                    }
+                },
+
+                ready: function () {
+                    // make global values available on instance.
+                    this.config = {
+                        apiUrl: 'https://dev-api.nextprot.org/',
+                        entry: 'NX_P52701'
+                    }
+                }
+            });
+        })();
+    </script>
+</dom-module>
